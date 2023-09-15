@@ -1,16 +1,44 @@
-def factorial(n):
-    if n == 0:
-        return 1
-    else:
-        return n * factorial(n-1)
 
-# Input a number
-num = int(input("Enter a number: "))
+class bankAccount:
 
-# Check if the number is negative
-if num < 0:
-    print("Factorial is not defined for negative numbers.")
-elif num == 0:
-    print("The factorial of 0 is 1")
+  def __init__(self, account_number, account_holder_name, initial_balance=0.0):
+    
+  self.__account_number = account_number
+  self.__account_holder_name = account_holder_name
+  self.__account_balance = initial_balance
+
+def deposit(self, amount):
+  if amount > 0:
+    self.__account_balance += amount
+    print("deposited ${}. New balance: ${}".format(amount,self.__account_balance))
+
 else:
-    print("The factorial of", num, "is", factorial(num))
+  print("invalid deposit amount. Please deposit a positive amount.")
+
+def withdraw(self, amount):
+  if amount > 0 and amount <= self.__account_balance:
+    self.__account_balance -= amount
+    print("withdraw ${}. New balance: ${}".format(amount,self.__account_balance))
+
+else:
+print("Invalid withdrawal amount or insufficient balance.")
+
+def display_balance(self):
+  print("Account balance for{} (Account {}): ${}".format(
+    self.__account_holder_name, self.__account_number,
+    self.__account_balance))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
